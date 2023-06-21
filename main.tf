@@ -80,7 +80,7 @@ resource "aws_instance" "web" {
   # We run a remote provisioner on the instance after creating it.
   # In this case, we just install nginx and start it. By default,
   # this should be on port 80
-  user_data = "${file("userdata.sh")}"
+  user_data = "${file("user_data.sh")}"
 
   #Instance tags
   tags = {
